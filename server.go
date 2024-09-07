@@ -171,7 +171,7 @@ type nilAddressGenerator struct{}
 
 func (n *nilAddressGenerator) Validate() error { return errRelayAddressGeneratorNil }
 
-func (n *nilAddressGenerator) AllocatePacketConn(string, int) (net.PacketConn, net.Addr, error) {
+func (n *nilAddressGenerator) AllocatePacketConn(string, int, string) (net.PacketConn, net.Addr, error) {
 	return nil, nil, errRelayAddressGeneratorNil
 }
 

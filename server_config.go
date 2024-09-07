@@ -20,7 +20,7 @@ type RelayAddressGenerator interface {
 	Validate() error
 
 	// Allocate a PacketConn (UDP) RelayAddress
-	AllocatePacketConn(network string, requestedPort int) (net.PacketConn, net.Addr, error)
+	AllocatePacketConn(network string, requestedPort int, username string) (net.PacketConn, net.Addr, error)
 
 	// Allocate a Conn (TCP) RelayAddress
 	AllocateConn(network string, requestedPort int) (net.Conn, net.Addr, error)
